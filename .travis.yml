@@ -9,7 +9,7 @@ jobs:
   include:
     - stage: build
       script:
-        - docker build --tag $DOCKER_USERNAME/avitools --buildargs avi_version=${TRAVIS_BRANCH} .
+        - docker build --tag $DOCKER_USERNAME/avitools --build-arg avi_version=${TRAVIS_BRANCH} .
     - stage: test
       script:
         - docker run --rm $DOCKER_USERNAME/avitools terraform version

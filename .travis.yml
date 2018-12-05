@@ -1,0 +1,29 @@
+language: minimal
+
+sudo: required
+
+services:
+  - docker
+
+jobs:
+  include:
+    - stage: build
+      script:
+        - docker build --tag $DOCKER_USERNAME/avitools --buildargs avi_version=${TRAVIS_BRANCH} .
+    - stage: test
+      script:
+        - docker run --rm $DOCKER_USERNAME/avitools terraform version
+        - docker run --rm $DOCKER_USERNAME/avitools ansible --version
+        - docker run --rm $DOCKER_USERNAME/avitools kubectl version --client
+        - docker run --rm $DOCKER_USERNAME/avitools oc
+      after_success:
+        - docker tag timarenz/avitools timarenz/avitools:${TRAVIS_BRANCH}
+    - stage: release
+      before_deploy:
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+      deploy:
+        - provider: script
+          script: docker push timarenz/avitools
+          skip_cleanup: true
+          on:
+            tags: true

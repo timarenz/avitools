@@ -43,6 +43,7 @@ RUN apt-get update && apt-get install -y \
     jq \
     libffi-dev \
     libssl-dev \
+    lua5.3 \
     make \
     netcat \
     nmap \
@@ -63,6 +64,8 @@ RUN pip install --no-cache-dir -U \
     appdirs==1.4.3 \
     avimigrationtools==${avi_version} \
     avisdk==${avi_version} \
+    https://avinetworks.com/software-downloads/Version-18.1.5/avi_shell-18.1.5-9248.tar.gz?Signature=Cw2NlK6ZiocdezWhqe9j9f%2Bz%2F5c%3D&Expires=1544432886&AWSAccessKeyId=AKIAIXO5A5YMNLOVWNBQ \
+    aws-google-auth \
     bigsuds \
     ConfigParser==3.5.0 \
     ecdsa==0.13 \
@@ -70,11 +73,14 @@ RUN pip install --no-cache-dir -U \
     flask==0.12.2 \
     jinja2==2.10 \
     jsondiff \
+    kubernetes \
     netaddr \
     networkx==2.0 \
     nose-html-reporting==0.2.3 \
     nose-testconfig==0.10 \
     openpyxl==2.4.9 \
+    openshift \
+    git+https://github.com/openshift/openshift-restclient-python.git \
     pandas==0.21.0 \
     paramiko==2.4.1 \
     pexpect==4.3.0 \

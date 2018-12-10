@@ -12,7 +12,7 @@ script:
   - docker run --rm $DOCKER_USERNAME/avitools terraform version
   - docker run --rm $DOCKER_USERNAME/avitools ansible --version
   - docker run --rm $DOCKER_USERNAME/avitools kubectl version --client
-  - docker run --rm $DOCKER_USERNAME/avitools oc
+  - docker run --rm $DOCKER_USERNAME/avitools oc version
 after_success:
   - docker tag timarenz/avitools timarenz/avitools:${TRAVIS_BRANCH}
 before_deploy:

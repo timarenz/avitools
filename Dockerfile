@@ -64,7 +64,7 @@ RUN pip install --no-cache-dir -U \
     appdirs \
     avimigrationtools==${avi_version} \
     avisdk==${avi_version} \
-    'https://avinetworks.com/software-downloads/Version-18.1.5/avi_shell-18.1.5-9248.tar.gz?Signature=Cw2NlK6ZiocdezWhqe9j9f%2Bz%2F5c%3D&Expires=1544432886&AWSAccessKeyId=AKIAIXO5A5YMNLOVWNBQ' \
+    'https://avinetworks.com/software-downloads/Version-18.1.5/avi_shell-18.1.5-9248.tar.gz?Signature=cdjRMr1sUxuALmqjGRspqUIqWok%3D&Expires=1544446872&AWSAccessKeyId=AKIAIXO5A5YMNLOVWNBQ' \
     aws-google-auth \
     bigsuds \
     ConfigParser \

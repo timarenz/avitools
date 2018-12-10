@@ -60,43 +60,43 @@ RUN apt-get update && apt-get install -y \
     wget
 
 RUN pip install --no-cache-dir -U \
-    ansible==2.6.0 \
-    appdirs==1.4.3 \
+    ansible \
+    appdirs \
     avimigrationtools==${avi_version} \
     avisdk==${avi_version} \
-    https://avinetworks.com/software-downloads/Version-18.1.5/avi_shell-18.1.5-9248.tar.gz?Signature=Cw2NlK6ZiocdezWhqe9j9f%2Bz%2F5c%3D&Expires=1544432886&AWSAccessKeyId=AKIAIXO5A5YMNLOVWNBQ \
+    'https://avinetworks.com/software-downloads/Version-18.1.5/avi_shell-18.1.5-9248.tar.gz?Signature=Cw2NlK6ZiocdezWhqe9j9f%2Bz%2F5c%3D&Expires=1544432886&AWSAccessKeyId=AKIAIXO5A5YMNLOVWNBQ' \
     aws-google-auth \
     bigsuds \
-    ConfigParser==3.5.0 \
-    ecdsa==0.13 \
+    ConfigParser \
+    ecdsa \
     f5-sdk \
-    flask==0.12.2 \
-    jinja2==2.10 \
+    flask \
+    jinja2 \
     jsondiff \
     kubernetes \
     netaddr \
-    networkx==2.0 \
-    nose-html-reporting==0.2.3 \
-    nose-testconfig==0.10 \
-    openpyxl==2.4.9 \
+    networkx \
+    nose-html-reporting \
+    nose-testconfig \
+    openpyxl \
     openshift \
     git+https://github.com/openshift/openshift-restclient-python.git \
-    pandas==0.21.0 \
-    paramiko==2.4.1 \
-    pexpect==4.3.0 \
-    pycrypto==2.6.1 \
-    pyOpenssl==17.5.0 \
-    pyparsing==2.2.0 \
-    pytest-cov==2.5.1 \
-    pytest-xdist==1.22.0 \
-    pytest==3.2.5 \
+    pandas \
+    paramiko \
+    pexpect \
+    pycrypto \
+    pyOpenssl \
+    pyparsing \
+    pytest-cov \
+    pytest-xdist \
+    pytest \
     pyvmomi \
-    pyyaml==3.12 \
-    requests-toolbelt==0.8.0 \
-    requests==2.18.4 \
-    unittest2==1.1.0 \
-    vcrpy==1.11.1 \
-    xlrd==1.1.0 \
+    pyyaml \
+    requests-toolbelt \
+    requests \
+    unittest2 \
+    vcrpy \
+    xlrd \
     xlsxwriter
 
 RUN ansible-galaxy -c install \
